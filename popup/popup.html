@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>X 粉丝数显示</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="../src/config.js" defer></script>
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <header><img src="../icons/icon48.png" width="36" height="36" alt=""><h1>X 粉丝数显示</h1><span id="version"></span></header>
+  <main aria-label="显示设置">
+    <label class="row"><span>显示粉丝数<span class="description" id="enabled-desc">总开关</span></span><input type="checkbox" role="switch" name="enabled" aria-describedby="enabled-desc"></label>
+    <fieldset id="details" aria-label="其他显示设置">
+      <label class="row"><span>关系标签<span class="description" id="relationTags-desc">互关 / 关注了你</span></span><input type="checkbox" role="switch" name="relationTags" aria-describedby="relationTags-desc"></label>
+      <label class="row"><span>悬停详情卡<span class="description" id="hoverCard-desc">悬停查看精确数量与账号详情</span></span><input type="checkbox" role="switch" name="hoverCard" aria-describedby="hoverCard-desc"></label>
+      <label class="row"><span>粉丝量分级配色<span class="description" id="colorTiers-desc">按粉丝数量显示不同颜色</span></span><input type="checkbox" role="switch" name="colorTiers" aria-describedby="colorTiers-desc"></label>
+      <label class="row"><span>调试条<span class="description" id="debug-desc">左下角计数</span></span><input type="checkbox" role="switch" name="debug" aria-describedby="debug-desc"></label>
+    </fieldset>
+  </main>
+  <p id="status" role="status" hidden></p>
+  <footer>设置即时生效，仅保存开关，不记录浏览数据</footer>
+</body>
+</html>
